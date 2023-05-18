@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory App Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header App -->
+      <header class="header">
+        <div class="header__wrapper">
+          <h1 class="header__title">Inventory App using Vanilla JS</h1>
+          <div class="header__products-quantity">0</div>
+        </div>
+      </header>
+      <section class="body-app">
+        <!-- Category Section -->
+        <div class="category-header">
+          <h2>Add New Category</h2>
+        </div>
+        <div class="add-category">
+          <div class="add-category__title">
+            <p>Title</p>
+            <input
+              type="text"
+              class="add-category__input-title add-category__input-category"
+            />
+          </div>
+          <div class="add-category__description">
+            <p>Description</p>
+            <textarea
+              cols="70"
+              rows="5"
+              class="add-category__input-description add-category__input-category"
+            ></textarea>
+          </div>
+          <div class="add-category__buttons">
+            <button class="add-category__cancel-button">Cancel</button>
+            <button class="add-category__add-button">Add Category</button>
+          </div>
+        </div>
+        <div class="category-link">
+          <a href="#" class="category-link__add-category">Add Category?</a>
+        </div>
+        <!-- Product Section -->
+        <div class="product-header">
+          <h2>Add New Product</h2>
+        </div>
+        <div class="add-product">
+          <div class="add-product__title">
+            <p>Title</p>
+            <input
+              type="text"
+              class="add-product__input-title add-product__input-product"
+            />
+          </div>
+          <div class="add-product__quantity">
+            <p>Quantity</p>
+            <input
+              type="number"
+              class="add-product__input-quantity add-product__input-product"
+            />
+          </div>
+          <div class="add-product__category">
+            <p>Category</p>
+            <div class="add-product__dropdown-wrapper">
+              <select
+                class="add-product__dropdown-list add-product__input-product"
+              >
+                <option class="add-product__dropdown-option" selected>
+                  Select a Category:
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="add-product__button">
+            <button class="add-product__add-button">Add Product</button>
+          </div>
+        </div>
+        <div class="products-header">
+          <h2>Products List</h2>
+        </div>
+        <!-- Sort and Filter Section -->
+        <div class="sort-filter-wrapper">
+          <div class="sort-filter-wrapper__product-filter">
+            <p>Search</p>
+            <input type="text" class="sort-filter-wrapper__input-search" />
+          </div>
+          <div class="sort-filter-wrapper__product-sort">
+            <p>Sort</p>
+            <div class="sort-filter-wrapper__dropdown-wrapper">
+              <select class="sort-filter-wrapper__dropdown-list">
+                <option
+                  class="sort-filter-wrapper__dropdown-option"
+                  value="newest"
+                  selected
+                >
+                  Newest
+                </option>
+                <option
+                  class="sort-filter-wrapper__dropdown-option"
+                  value="oldest"
+                >
+                  Oldest
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="horizontal-line"></div>
+        <!-- Products List -->
+        <ul class="products-list">
+          <!-- <li class="product">
+            <div class="product__title">
+              <div>
+                <input
+                  type="text"
+                  class="product__input-title"
+                  value="JS"
+                  disabled
+                />
+              </div>
+              <div class="product__edit-cancel-btn"></div>
+            </div>
+            <div class="product__specs">
+              <div class="product__product-specs">
+                <span class="product__date product__spec">1402/01/01</span>
+                <span class="product__category product__spec">car</span>
+                <span class="product__quantity product__spec">10</span>
+              </div>
+              <div class="product__buttons">
+                <button class="product__edit-button">Edit</button>
+                <button class="product__delete-button">Delete</button>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+      </section>
+    </div>
+    <!-- JS -->
+    <script src="./js/Main.js" type="module"></script>
+  </body>
+</html>
